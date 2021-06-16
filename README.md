@@ -35,8 +35,9 @@
 > **ℹ️ Info**: For your information! </br>
 > 변수 및 파일을 암호화 하는데 사용 
  
+
 > **⚠ WARNING**: Be careful!  </br>
-> A description of the colour, smell and dangerous behaviour of the aliens.
+> 암호화 대상 파일은 yaml 형식의 파일 권장, ini 형식 파일 형태는 지원하지 않음.
 
 
 # 9. Vmware
