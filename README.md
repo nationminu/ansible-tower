@@ -8,12 +8,15 @@
 # 2. MANAGE INVENTORY
 
 > https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html  
-
-
-
-# 3. SCHEDULE ANSIBLE JOBS
  
+# 3. SCHEDULE ANSIBLE JOBS 
 > https://docs.ansible.com/ansible-tower/latest/html/userguide/scheduling.html
+
+
+> **ℹ️ Info**: For your information! </br>
+> Ansible Tower는 주기적으로 동작하는 스케쥴링 작업을 생성.
+
+[o] Ansible Tower [데모 보기](./SCHEDULE/README.md)
 
 # 4. REAL-TIME JOB STATUS
 > https://docs.ansible.com/ansible-tower/latest/html/userguide/jobs.html
@@ -32,11 +35,10 @@
 # 8. Ansible Vault
 > https://docs.ansible.com/ansible/latest/user_guide/vault.html
 
-Ansible Vault [데모 보기](./VAULT/README.md)
-
 > **ℹ️ Info**: For your information! </br>
 > 변수 및 파일을 암호화 하는데 사용 
  
+[o] Ansible Vault [데모 보기](./VAULT/README.md)
 
 > **⚠ WARNING**: Be careful!  </br>
 > 암호화 대상 파일은 yaml 형식의 파일 권장, ini 형식 파일 형태는 지원하지 않음.
@@ -45,9 +47,7 @@ Ansible Vault [데모 보기](./VAULT/README.md)
 # 9. Vmware
 > https://docs.ansible.com/ansible/latest/scenario_guides/guide_vmware.html
 
-Ansible Playbook [데모 보기](./VMWARE/README.md)
-
 > **ℹ️ Info**: For your information! </br>
-> Ansible Playbook 으로 Vmware esxi 하기
+> Ansible Playbook 사용하여 vmware exsi 를 관리.
  
- 
+[o] Ansible Playbook [데모 보기](./VMWARE/README.md)
