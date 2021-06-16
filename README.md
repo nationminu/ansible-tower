@@ -29,7 +29,7 @@
 > https://docs.ansible.com/ansible-tower/latest/html/administration/logfiles.html </BR>
 > https://docs.ansible.com/ansible-tower/latest/html/administration/logging.html
 
-# 8. Vault
+# 8.  Vault
 > https://docs.ansible.com/ansible/latest/user_guide/vault.html
 
 [데모 보기](./VAULT/README.md)
