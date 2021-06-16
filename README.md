@@ -32,6 +32,8 @@
 # 8. Vault
 > https://docs.ansible.com/ansible/latest/user_guide/vault.html
 
+[데모 보기](./VAULT/README.md)
+
 > **ℹ️ Info**: For your information! </br>
 > 변수 및 파일을 암호화 하는데 사용 
  
