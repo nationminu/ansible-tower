@@ -44,3 +44,10 @@ Ansible Vault [데모 보기](./VAULT/README.md)
 
 # 9. Vmware
 > https://docs.ansible.com/ansible/latest/scenario_guides/guide_vmware.html
+
+Ansible Playbook [데모 보기](./VMWARE/README.md)
+
+> **ℹ️ Info**: For your information! </br>
+> Ansible Playbook 으로 Vmware esxi 하기
+ 
+ 
