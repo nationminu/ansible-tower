@@ -1,14 +1,21 @@
 # ansible-tower 3.8.3 / Ansible Automation Platform 1.2.3 
  
 # 1. ANSIBLE DASHBOARD
-
 > https://docs.ansible.com/ansible-tower/latest/html/quickstart/examine_dashboard.html 
 
+> **ℹ️ Info**: For your information! </br>
+> Ansible Tower는 작업 실행 성공/실패 이력등을 Dashboard 로 표현.
 
-# 2. MANAGE INVENTORY
+[o] Ansible Tower [데모 보기](./DASHBOARD/README.md)
 
+# 2. MANAGE INVENTORY 
 > https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html  
  
+> **ℹ️ Info**: For your information! </br>
+> Ansible Tower는 파일이 아닌 설정 형태의 inventory 제공.
+
+[o] Ansible Tower [데모 보기](./INVENTORY/README.md)
+
 # 3. SCHEDULE ANSIBLE JOBS 
 > https://docs.ansible.com/ansible-tower/latest/html/userguide/scheduling.html
 
@@ -42,7 +49,7 @@
 
 [o] Ansible Tower [데모 보기](./RESTAPI/README.md)
 
-# 7. Logging
+# 7. LOGGING
 > https://docs.ansible.com/ansible-tower/latest/html/administration/logfiles.html </BR>
 > https://docs.ansible.com/ansible-tower/latest/html/administration/logging.html
 
