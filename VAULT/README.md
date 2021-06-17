@@ -4,11 +4,11 @@
    
 ## 1. Vault password
 
-> vault password 는 ansible vault 에서 암복호화를 하기위한 key 값이다.
+> vault password 는 ansible vault 에서 암/복호화에 사용되는 key 값이다.
 
 ### 1. Prompt
 
-> **--ask-vault-pass** : 암복호화 또는 playbook 실행시 매번 prompt로 입력 받는다.
+> **--ask-vault-pass** : 암/복호화 또는 playbook 실행시 매번 prompt로 입력 받는다.
 
 - admin.yaml 생성
 ```bash
@@ -38,7 +38,7 @@ $ANSIBLE_VAULT;1.1;AES256
 
 ### 2. File
 
-> **--vault-id / --vault-password-file** : 암복호화 또는 playbook 실행시 파일의 내용을 사용한다.
+> **--vault-id / --vault-password-file** : 암/복호화 또는 playbook 실행시 파일의 내용을 사용한다.
 
 - vault password file 생성
 ```bash
