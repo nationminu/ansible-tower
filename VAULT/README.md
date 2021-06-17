@@ -86,7 +86,7 @@ username: !vault |
           6265
 Encryption successful
 ```
---- password 값 암호화
+- password 값 암호화
 ```bash
 # ansible-vault encrypt_string 'P@ssw0rd' --name 'password' --vault-password-file ansible.vault
 password: !vault |
@@ -99,8 +99,38 @@ password: !vault |
 Encryption successful
 ```
 
+- 암호화된 username / password 값으로 user.yaml 파일 생성
+```yaml
+---
+username: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          63343163393163336531616264353066323763333235336363643536623333326633343430326663
+          6633383135613161616334383936653935383563663633310a643238363939343566383138633562
+          66373430396436346431313638373661323632613330373866346136656266346335393232376563
+          6130363038336337620a343765613065336464303139303337326161323033623133333262613230
+          6265
+password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          34363333663565343733616539616362613836323464383034336136656531383238333364313963
+          6537613830373034643035363738303738613335346336320a613262343135383832376137666634
+          30636238366165336164663762623230333634373733646537626630336266393437393564663061
+          3538336464343839320a333561313039366332366563653231376538653635616566356639303833
+          3432      
+...
+```
+
 ### 2. Decription
 
+```bash
+# ansible localhost -m debug -a var="username" -e "@user.yaml" --vault-password-file ansible.vault
+localhost | SUCCESS => {
+    "username": "user1"
+}
+# ansible localhost -m debug -a var="password" -e "@user.yaml" --vault-password-file ansible.vault
+localhost | SUCCESS => {
+    "username": "P@ssW0rd"
+}
+```
 
 ## 3. File Encryption
 
