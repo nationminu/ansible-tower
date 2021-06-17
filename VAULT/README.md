@@ -252,13 +252,13 @@ localhost                  : ok=1    changed=0    unreachable=0    failed=0
 
 - vault ID 만들기
 ```
-echo "user vault" > username.vault
-echo "password vault" > password.vault
+echo "user vault" > ~/ansible/username.vault
+echo "password vault" > ~/ansible/password.vault
 ```
           
 - username 암호화
 ```bash
-# ansible-vault encrypt_string 'user1' --name 'usernamme' --vault-id user@username.vault 
+# ansible-vault encrypt_string 'user1' --name 'usernamme' --vault-id user@~/ansible/username.vault
 username: !vault |
           $ANSIBLE_VAULT;1.1;AES256;user
           63343163393163336531616264353066323763333235336363643536623333326633343430326663
@@ -270,7 +270,7 @@ Encryption successful
 ```
 - password 암호화
 ```bash
-# ansible-vault encrypt_string 'P@ssW0rd' --name 'password' --vault-id pass@password.vault
+# ansible-vault encrypt_string 'P@ssW0rd' --name 'password' --vault-id @~/ansible/password.vault
 password: !vault |
           $ANSIBLE_VAULT;1.1;AES256;pass
           34363333663565343733616539616362613836323464383034336136656531383238333364313963
@@ -283,7 +283,7 @@ Encryption successful
 
 - playbook 실행
 ```bash
-# ansible-playbook debug.yaml --vault-id user@username.vault --vault-id pass@password.vault 
+# ansible-playbook debug.yaml --vault-id user@~/ansible/username.vault --vault-id pass@~/ansible/password.vault
 ```
 
 - ansible.cfg 설정 을 기본 vault-id 실행
