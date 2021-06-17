@@ -213,8 +213,8 @@ password: P@ssW0rd
   tasks:
   - debug:
       msg:
-        - "username {{ username }}"
-        - "password {{ password }}"
+        - "username : {{ username }}"
+        - "password : {{ password }}"
 ```
 
 - playbook 실행
@@ -229,8 +229,8 @@ PLAY [localhost] ***************************************************************
 TASK [debug] *****************************************************************************************************************************
 ok: [localhost] => {
     "msg": [
-        "username admin", 
-        "password P@ssw0rd"
+        "username : admin", 
+        "password : P@ssw0rd"
     ]
 }
 
