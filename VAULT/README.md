@@ -74,6 +74,8 @@ $ANSIBLE_VAULT;1.1;AES256
 
 ### 1. Encription
 
+> ansible vault "encrypt_string" 옵션으로 값을 암호화하면 콘솔에 결과가 출력된다.
+
 - username 값 암호화
 ```bash
 # ansible-vault encrypt_string 'user1' --name 'username' --vault-password-file ansible.vault
@@ -99,7 +101,7 @@ password: !vault |
 Encryption successful
 ```
 
-- 암호화된 username / password 값으로 user.yaml 파일 생성
+- 암호화된 username / password 값으로 user.yaml 파일 생성한다.
 ```yaml
 ---
 username: !vault |
@@ -120,6 +122,8 @@ password: !vault |
 ```
 
 ### 2. Decription
+
+> ansible debug 모듈을 이용하여 복호화한다.
 
 ```bash
 # ansible localhost -m debug -a var="username" -e "@user.yaml" --vault-password-file ansible.vault
