@@ -281,9 +281,13 @@ password: !vault |
 Encryption successful     
 ```
 
-- playbook 실행
+- playbook 실행/vault password 입력 실행
 ```bash
 # ansible-playbook debug.yaml --vault-id user@~/ansible/username.vault --vault-id pass@~/ansible/password.vault
+
+# ansible-playbook debug.yaml --vault-id user@prompt --vault-id pass@prompt
+Vault password (user): 
+Vault password (pass): 
 ```
 
 - ansible.cfg 설정 을 기본 vault-id 실행
