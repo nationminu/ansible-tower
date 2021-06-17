@@ -258,7 +258,7 @@ echo "password vault" > password.vault
           
 - username 암호화
 ```bash
-# ansible-vault encryp_string 'user' --name 'usernamme' --vault-id user@username.vault 
+# ansible-vault encryp_string 'user1' --name 'usernamme' --vault-id user@username.vault 
 username: !vault |
           $ANSIBLE_VAULT;1.1;AES256;user
           63343163393163336531616264353066323763333235336363643536623333326633343430326663
