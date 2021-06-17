@@ -244,6 +244,59 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=1    changed=0    unreachable=0    failed=0   
 ```
 
+          
+
+## 5. Multiple vault passwords
+
+> 여러개의 vault ID 로 암호화된 변수 및 파일은 --vault-id 를 여러번 사용하여 사용이 가능하다.
+
+- vault ID 만들기
+```
+echo "user vault" > username.vault
+echo "password vault" > password.vault
+```
+          
+- username 암호화
+```bash
+# ansible-vault encryp_string 'user' --name 'usernamme' --vault-id user@username.vault 
+username: !vault |
+          $ANSIBLE_VAULT;1.1;AES256;user
+          63343163393163336531616264353066323763333235336363643536623333326633343430326663
+          6633383135613161616334383936653935383563663633310a643238363939343566383138633562
+          66373430396436346431313638373661323632613330373866346136656266346335393232376563
+          6130363038336337620a343765613065336464303139303337326161323033623133333262613230
+          6265
+Encryption successful  
+```
+- password 암호화
+```bash
+# ansible-vault encryp_string 'P@ssW0rd' --name 'password' --vault-id pass@password.vault
+password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256;pass
+          34363333663565343733616539616362613836323464383034336136656531383238333364313963
+          6537613830373034643035363738303738613335346336320a613262343135383832376137666634
+          30636238366165336164663762623230333634373733646537626630336266393437393564663061
+          3538336464343839320a333561313039366332366563653231376538653635616566356639303833
+          3432      
+```
+
+- playbook 실행
+```bash
+# ansible-playbook debug.yaml --vault-id user@username.vault --vault-id pass@password.vault 
+# ansible-playbook debug.yaml --vault-id user --vault-id pass
+```
+
+- ansible.cfg 설정 을 기본 vault-id 실행
+```bash
+# cat ansible.cfg
+[defaults]
+inventory = inventory
+remote_user = root
+vault_identity_list = user@~/ansible/username.vault , pass@~/ansible/password.vault 
+          
+# ansible-playbook debug.yaml 
+```
+          
 
 > **:link: Referer** : 
 > https://docs.ansible.com/ansible/latest/user_guide/vault.html
