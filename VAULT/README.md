@@ -284,7 +284,6 @@ Encryption successful
 - playbook 실행
 ```bash
 # ansible-playbook debug.yaml --vault-id user@username.vault --vault-id pass@password.vault 
-# ansible-playbook debug.yaml --vault-id user --vault-id pass
 ```
 
 - ansible.cfg 설정 을 기본 vault-id 실행
