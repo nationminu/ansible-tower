@@ -12,7 +12,7 @@
 
 - admin.yaml 생성
 ```bash
-ansible-vault create admin.yaml --ask-vault-pass
+# ansible-vault create admin.yaml --ask-vault-pass
 New Vault password: 
 Confirm New Vault password: 
 ```
@@ -25,7 +25,7 @@ password: P@ssW0rd
 ```
 - admin.yaml 암호화 확인
 ```bash
-cat admin.yaml
+# cat admin.yaml
 $ANSIBLE_VAULT;1.1;AES256
 31323934653362363830306533666332323461383534623237633563653333653134306333313065
 6136376233316437366237383235613362613938303838370a656162373062643737356139343831
@@ -42,11 +42,11 @@ $ANSIBLE_VAULT;1.1;AES256
 
 - vault password file 생성
 ```bash
-echo "Super P@wer P@ssW0rd V0ult" > user.vault
+# echo "Super P@wer P@ssW0rd V0ult" > ansible.vault
 ```
 - guest.yaml 생성
 ```bash
-ansible-vault create guest.yaml  --vault-password-file user.vault
+# ansible-vault create guest.yaml  --vault-password-file ansible.vault
 ```
 - editor 로 사용자 정보 입력 
 ```yaml
@@ -57,7 +57,7 @@ password: P@ssW0rd
 ```
 - guest.yaml 암호화 확인
 ```bash
-cat guest.yaml
+# cat guest.yaml
 $ANSIBLE_VAULT;1.1;AES256
 35313366333930316566303461623266663335313662636535333862616534666239613831366637
 3062376664323136313630313930393266633262666139330a336235326434636431333431373362
@@ -70,7 +70,34 @@ $ANSIBLE_VAULT;1.1;AES256
 
 ## 2. Variable Encrytion
 
+> Yaml 파일의 변수 값을 암호화한다.
+
 ### 1. Encription
+
+- username 값 암호화
+```bash
+# ansible-vault encrypt_string 'user1' --name 'username' --vault-password-file ansible.vault
+username: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          63343163393163336531616264353066323763333235336363643536623333326633343430326663
+          6633383135613161616334383936653935383563663633310a643238363939343566383138633562
+          66373430396436346431313638373661323632613330373866346136656266346335393232376563
+          6130363038336337620a343765613065336464303139303337326161323033623133333262613230
+          6265
+Encryption successful
+```
+--- password 값 암호화
+```bash
+# ansible-vault encrypt_string 'P@ssw0rd' --name 'password' --vault-password-file ansible.vault
+password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          34363333663565343733616539616362613836323464383034336136656531383238333364313963
+          6537613830373034643035363738303738613335346336320a613262343135383832376137666634
+          30636238366165336164663762623230333634373733646537626630336266393437393564663061
+          3538336464343839320a333561313039366332366563653231376538653635616566356639303833
+          3432
+Encryption successful
+```
 
 ### 2. Decription
 
