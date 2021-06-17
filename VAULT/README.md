@@ -47,7 +47,6 @@ echo "Super P@wer P@ssW0rd V0ult" > user.vault
 - guest.yaml 생성
 ```bash
 ansible-vault create guest.yaml  --vault-password-file user.vault
-...
 ```
 - editor 로 사용자 정보 입력 
 ```yaml
