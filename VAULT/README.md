@@ -138,12 +138,52 @@ localhost | SUCCESS => {
 
 ## 3. File Encryption
 
+> ansible vault 를 사용하여 파일 내용 전체를 암호화 한다.
+
+- manager.yaml 파일 생성
+```yaml
+---
+username: manager
+password: P@ssW0rd
+```
 
 ### 1. Encription
 
+> 대상 파일을 ansible vault "encrypt" 옵션으로 파일 내용을 암호화 한다.
+
+- manager.yaml 파일을 암호화한다.
+```bash
+# ansible-vault encrypt manager.yaml --vault-password-file ansible.vault 
+Encryption successful
+```
+
+-- 암호화된 파일 내용을 확인한다.
+```bash
+# cat manager.yaml 
+$ANSIBLE_VAULT;1.1;AES256
+63356162666365303863663536666264616135653463653336316334643065366334373438343638
+3334333131643363356361646165336234376263316239370a336138353436616336333936333137
+30343730623736383734653337353036303963616665363834313861343561326133363933336236
+6263346563633835360a626633323966326332306534306564633732353432616262323332626637
+38303030366130373035633666613339653861306339623032356462343466303932313833386638
+3535386662653237646634663763313466353839303966663661
+```
+
 ### 2. Decription
 
+- manager.yaml 파일을 복호화한다.
+```bash
+ ansible-vault decrypt manager.yaml --vault-password-file user.vault 
+Decryption successful
+```
 
+-- 호화된 파일 내용을 확인한다.
+```bash
+# cat manager.yaml 
+---
+username: manager
+password: P@ssW0rd
+```
 
 > **:link: Referer** : 
 > https://docs.ansible.com/ansible/latest/user_guide/vault.html
