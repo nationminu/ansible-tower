@@ -148,6 +148,7 @@ localhost | SUCCESS => {
 ---
 username: manager
 password: P@ssW0rd
+...
 ```
 
 ### 1. Encription
@@ -186,6 +187,7 @@ Decryption successful
 ---
 username: manager
 password: P@ssW0rd
+...
 ```
 
 
@@ -218,6 +220,7 @@ password: P@ssW0rd
       msg:
         - "username : {{ username }}"
         - "password : {{ password }}"
+...          
 ```
 
 - playbook 실행
