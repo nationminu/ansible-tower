@@ -10,9 +10,9 @@
 
 > **--ask-vault-pass** : 암복호화 또는 playbook 실행시 매번 prompt로 입력 받는다.
 
-- user.yaml 생성
+- admin.yaml 생성
 ```bash
-ansible-vault create user.yaml --ask-vault-pass
+ansible-vault create admin.yaml --ask-vault-pass
 New Vault password: 
 Confirm New Vault password: 
 ```
@@ -23,9 +23,9 @@ username: admin
 password: P@ssW0rd
 ...
 ```
-- user.yaml 암호화 확인
+- admin.yaml 암호화 확인
 ```bash
-cat user.yaml
+cat admin.yaml
 $ANSIBLE_VAULT;1.1;AES256
 31323934653362363830306533666332323461383534623237633563653333653134306333313065
 6136376233316437366237383235613362613938303838370a656162373062643737356139343831
