@@ -11,18 +11,20 @@
 > **--ask-vault-pass** : 암복호화 또는 playbook 실행시 매번 prompt로 입력 받는다.
 
 - user.yaml 생성
-``` 
+```bash
 ansible-vault create user.yaml --ask-vault-pass
 New Vault password: 
 Confirm New Vault password: 
-
-# editor 로 사용자 정보 입력
+```
+- editor 로 사용자 정보 입력 
+```yaml
 ---
 username: admin
 password: P@ssW0rd
+...
 ```
 - user.yaml 암호화 확인
-```
+```bash
 cat user.yaml
 $ANSIBLE_VAULT;1.1;AES256
 31323934653362363830306533666332323461383534623237633563653333653134306333313065
@@ -39,20 +41,23 @@ $ANSIBLE_VAULT;1.1;AES256
 > **--vault-id / --vault-password-file** : 암복호화 또는 playbook 실행시 파일의 내용을 사용한다.
 
 - vault password file 생성
-``` 
+```bash
 echo "Super P@wer P@ssW0rd V0ult" > user.vault
 ```
 - guest.yaml 생성
-``` 
+```bash
 ansible-vault create guest.yaml  --vault-password-file user.vault
-
-# editor 로 사용자 정보 입력
+...
+```
+- editor 로 사용자 정보 입력 
+```yaml
 ---
 username: guest
 password: P@ssW0rd
+...
 ```
 - guest.yaml 암호화 확인
-```
+```bash
 cat guest.yaml
 $ANSIBLE_VAULT;1.1;AES256
 35313366333930316566303461623266663335313662636535333862616534666239613831366637
