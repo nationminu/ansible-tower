@@ -1,0 +1,11 @@
+---
+- hosts: all
+  #connection: local
+    
+  tasks: 
+  - name: Template
+    template: 
+      src: facts.html.j2
+      dest: "/var/www/html/facts.html" 
+    #delegate_to: 127.0.0.1
+  

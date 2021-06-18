@@ -1,0 +1,21 @@
+---
+- hosts: all
+  #connection: local
+  
+  tasks:  
+  - name: Get timestamp from the system
+    service_facts:
+
+  - name: start the service if it's enabled
+    debug:
+      msg: "service {{ item }} is {{ ansible_facts.services[item].state }} and it will be started"  
+    with_items: "{{ ansible_facts.services }}"
+
+  - name: Template
+    template: 
+      src: service.html.j2
+      dest: "/tmp/{{ ansible_hostname }}_service_{{ ansible_date_time.iso8601_basic_short }}.html" 
+    #delegate_to: 127.0.0.1
+
+
+  

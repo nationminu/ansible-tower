@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My template</title>
+    <meta name="description" content="My template">
+    <style>
+		body {
+			background-color: #2D2D2D;
+		}
+		
+		h1 {
+			color: #C26356;
+			font-size: 30px;
+			font-family: Menlo, Monaco, fixed-width;
+		}
+		
+		p {
+			color: white;
+			font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+		}
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #C26356;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #eeeeee;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #C26356;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #C26356;
+        }
+	</style> 
+</head>
+<body class="">
+
+    <h1> * {{ ansible_hostname }}({{ ansible_host }}) Service List</h1>
+    <p></p>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Source</th>
+                <th>State</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for service in ansible_facts.services %} 
+            <tr>
+                <td>{{ ansible_facts.services[service].name }}</td>
+                <td>{{ ansible_facts.services[service].source }}</td>
+                <td>{{ ansible_facts.services[service].state }}</td>
+                <td>{{ ansible_facts.services[service].status }}</td>
+            </tr> 
+        {% endfor %}
+        </tbody>
+    </table>
+<!-- scripts -->
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  #connection: local
+  
+  vars:
+    service: httpd
+
+  tasks:
+  - name: populate service facts
+    service_facts:
+
+  - name: start the service if it's enabled
+    debug:
+      msg: "service {{ ansible_facts.services[service + '.service'] }} is enabled and it will be started"
+  

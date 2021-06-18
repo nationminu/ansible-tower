@@ -1,0 +1,14 @@
+---
+- hosts: all
+  #connection: local
+  
+  vars:
+    service: httpd
+
+  tasks: 
+
+  - name: start the service if it's enabled
+    service:
+      name: "{{ service }}"
+      state: started
+  
