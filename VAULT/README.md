@@ -3,7 +3,7 @@
 > **ℹ️ Info** : For your information! <BR>
 > 번수 및 파일을 암호화 하는데 사용.  <BR>
 
-본 튜토리얼은 ansible vault 를 이용하여 다양한 방법으로 사용자 변수(username,password)를 암호화 하는 내용을 포함하고 있습니다.
+본 튜토리얼은 ansible vault 를 이용하여 다양한 방법으로 사용자 변수(username,password)를 암호화 하는 내용을 포함하고 있다.
 
 ## 1. Vault password
 
