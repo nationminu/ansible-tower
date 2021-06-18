@@ -12,7 +12,7 @@
 
 ### 1. Inventory 등록
 
-> Menu > Inventories > ![add-button](../imgs/add-button.png)
+> Menu > Inventories > ![add-button](../imgs/add-button.png?v4&s=10)
 
 ![Inventories](../imgs/inventories.png)
 
