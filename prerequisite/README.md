@@ -8,13 +8,11 @@
 
 ## 1. Organizations 관리
 > Ansible Tower 에서 가장 높은 관리 조직으로, Users, Teams, Projects 및 Inventories 의 모음이다.
-
 ![TowerHierarchy](../imgs/TowerHierarchy.png)
 
 ### 1. Organizations 등록
 
 > Menu > Organizations > <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/>
-
 ![Organizations](../imgs/organizations.png)
 ![Organizations](../imgs/create-organizations.png)
 ![Organizations](../imgs/list-organizations.png)
@@ -23,7 +21,6 @@
 
 > Menu > Teams > <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > Organization 에 속한 Team 을 등록한다.
-
 ![Teams](../imgs/teams.png)
 ![Teams](../imgs/create-teams.png)
 ![Teams](../imgs/list-teams.png)
@@ -32,7 +29,6 @@
 
 > Menu > Users > <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/></BR>
 > Organization 에 속한 User 를 등록한다.
-
 ![Users](../imgs/users.png)
 ![Users](../imgs/create-users.png)
 ![Users](../imgs/list-users.png)
@@ -41,7 +37,6 @@
 
 > Menu > TEAMS > <TEAM이름> 수정 > USERS > <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > 상단에 USERS 로 이동후 사용자 추가
-
 ![JoinTeams](../imgs/join-teams.png)
 ![JoinTeams](../imgs/join-teams-2.png)
 ![JoinTeams](../imgs/join-teams-3.png)
@@ -64,14 +59,12 @@
 
 ## 1. Inventory 관리
 > 작업 대상 노드의 집합으로 그룹,호스트를 관리 할 수 있다.
-
 ![Inventories](../imgs/inventories.png)
 
 ### 1. Inventory 등록
 
 > Menu > Inventories <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > Inventory 선택 후 상단 Permission 에서 Team 또는 User 별 Role(Admin,Update,Ad Hoc, Use, Read) 설정이 가능하다.
-
 ![Inventories](../imgs/create-inventories.png)
 ![Inventories](../imgs/list-inventories.png)
 ![Inventories](../imgs/permission-inventories.png)
@@ -80,7 +73,6 @@
 
 > Inventory 선택 > Hosts <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > Inventories 의 Hosts 을 관리한다.
-
 ![Hosts](../imgs/hosts-inventories.png) 
 ![Hosts](../imgs/create-hosts.png) 
 
@@ -88,9 +80,7 @@
 
 > Inventory 선택 > Groups <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > Inventories 의 Group 을 관리한다.
-
 ![Groups](../imgs/groups-inventories.png)
- 
 ![Groups](../imgs/create-groups.png)
 
 > Inventory 선택 > Groups > Group 선택 > Hosts,Groups
@@ -104,16 +94,13 @@
 > Menu > Credentials <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > 작업 노드에 대한 인증을 하기위한 관리 도구이다. <BR>
 > 기본 OS 계정 정보를 포함한 Machine 인증, AWS, GCP 등의 다양한 모듈을 제공한다.
-
 ![Credentials](../imgs/credentials.png)
 
 ### 1. Credentals 등록 
- 
 ![Credentials](../imgs/create-credentials.png)
 ![Credentials](../imgs/list-credentials.png)
 
 > Credentails > Create Credentials > CREDENTIAL TYPE
-
 ![Credentials](../imgs/credentials-create-credential.png)
 ![Credentials](../imgs/credential-types-popup-window.png)
 
@@ -143,13 +130,11 @@
 
 > Job Template 에서 사용되는 playbook 목록을 Projects 로 구성한다. </br>
 > SCM(Playbook 목록)은 Git,Svn,Manual 등 다양한 방법을 제공한다. Tutorial 에서는 github 를 이용한다.
-
 ![Projects](../imgs/projects.png)
 
 ### 1. Project 등록
 
 > Menu > Projects <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
-
 ![Projects](../imgs/create-projects.png)
 ![Projects](../imgs/list-projects.png)
 
@@ -157,13 +142,11 @@
 
 > Job Template 은 Ansible Tower 에서 실행되는 최소 단위의 작업이다. </br>
 > Job Template 으로 Schedule Job, Workflow Job 을 생성할 수 있다.
-
 ![Template](../imgs/templates.png)
 
 ### 1. Job Template 등록
 
 > Menu > Template <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
-
 ![Template](../imgs/create-templates.png)
 ![Template](../imgs/list-templates.png)
 
@@ -189,8 +172,9 @@
 > Menu > Template <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> > Workflow Templte </BR>
 > 등록된 Job Template 을 연결하여 Workflow Job 을 생성한다. <BR> 
 > Tutorial 에서는 Step #1 ~ Step #3 까지의 Job Template 을 미리 생성해서 사용한다.
-
 ![Schedule](../imgs/workflow.png)
 ![Schedule](../imgs/create-workflow.png)
 ![Schedule](../imgs/visualizer-workflow-1.png)
+
+> Workflow 스탭 성공/실패시 다음 스탭을 결정할 수 있다. 
 ![Schedule](../imgs/visualizer-workflow-2.png)
