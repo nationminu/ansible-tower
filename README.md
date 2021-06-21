@@ -3,7 +3,7 @@
 # Prerequisite
 
 > **ℹ️ Info**: For your information! </br>
-> Ansible Tower 사용 방법
+> Ansible Tower Tutorial 사전 준비(기본 사용방법)
 
 [o] Ansible Tower [데모 보기](./prerequisite/README.md)
 

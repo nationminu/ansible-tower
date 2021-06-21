@@ -1,9 +1,8 @@
-# Ansiblde Tower 데모 준비
+# Ansiblde Tower 데모 사전 준비(기본 사용방법)
 
 > Ansible Tower 튜토리얼을 진행하기 위한 사전 준비: <BR>
 > 사용자 관리 > Organizations, Teams, Users 관리 <BR>
 > 작업 관리 > Inventory, Credentals, Projects, Job Template 관리 <BR>
-
 
 # 1. 사용자 관리
 
