@@ -42,7 +42,7 @@ url -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/jobs/
 }]
 ```
 
-# 6. API UT
+# 6. API UI
 > Ansible Tower 는 API UI 를 제공한다. <BR>
 > https://<TOWER_URL>/api : 로그인 필요.
 
