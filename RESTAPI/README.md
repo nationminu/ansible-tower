@@ -27,8 +27,17 @@
 ```
 
 # 4. Job Template 실행
-```
 > Job Template ID를 사용하여 Job Template을 실행한다.
+```
 # curl -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/launch/
 {"can_start_without_user_input":true,"passwords_needed_to_start":[],"ask_scm_branch_on_launch":false,"ask_variables_on_launch":false,"ask_tags_on_launch":false,"ask_diff_mode_on_launch":false,"ask_skip_tags_on_launch":false,"ask_job_type_on_launch":false,"ask_limit_on_launch":false,"ask_verbosity_on_launch":false,"ask_inventory_on_launch":false,"ask_credential_on_launch":false,"survey_enabled":false,"variables_needed_to_start":[],"credential_needed_to_start":false,"inventory_needed_to_start":false,"job_template_data":{"name":"Tutorial Job Template","id":12,"description":"Tutorial Job Template"},"defaults":{"extra_vars":"","diff_mode":false,"limit":"","job_tags":"","skip_tags":"","job_type":"run","verbosity":0,"inventory":{"name":"Tutorial Inventory","id":4},"credentials":[{"id":5,"name":"Tutorial Credential","credential_type":1,"passwords_needed":[]}],"scm_branch":""}}
+```
+
+# 5. 실행된 Job 확인
+> Job Template ID를 사용하여 실행된 Job Template 을 확인한다.
+
+``` 
+url -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/jobs/
+{"count":170,"next":"/api/v2/job_templates/12/jobs/?page=2","previous":null,"results":[{"id":10,"type":"job","url":"/api/v2/jobs/10/","related":{"created_by":"/api/v2/users/1/","labels":"/api/v2/jobs/10/labels/","inventory":"/api/v2/inventories/4/","project":"/api/v2/projects/11/","organization":"/api/v2/organizations/3/","credentials":"/api/v2/jobs/10/credentials/","unified_job_template":"/api/v2/job_templates/12/","stdout":"/api/v2/jobs/10/stdout/","job_events":"/api/v2/jobs/10/job_events/","job_host_summaries":"/api/v2/jobs/10/job_host_summaries/","activity_stream":"/api/v2/jobs/10/activity_stream/","notifications":"/api/v2/jobs/10/notifications/",...
+}]
 ```
