@@ -45,14 +45,11 @@
 
 > Organizations 상단 PERMISSIONS 에서 Team 또는 User 별 Role(Admin, Execute, Project Admin, Inventory Admin, ...) 설정이 가능하다.
 > Teams, Users 상단 PERMISSIONS 에서 리소스별(Job Templates, PROJECTS ,INVENTORIES, ...) 접근 권한 설정이 가능하다.
-
-- Organizations User Role 설정
+> - Organizations User Role 설정
 ![Permission](../imgs/users-permissions.png)
-
-- Organizations Team Role 설정
+> - Organizations Team Role 설정
 ![Permission](../imgs/teams-permissions.png)
-
-- Teams,Users 리소스별 권한
+> - Teams,Users 리소스별 권한
 ![Permission](../imgs/permissions.png)
 
 # 2. 작업 관리
@@ -90,13 +87,12 @@
 ![Groups](../imgs/list-hosts.png)
 
 ## 2. Credentals 관리
-
-> Menu > Credentials <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 > 작업 노드에 대한 인증을 하기위한 관리 도구이다. <BR>
 > 기본 OS 계정 정보를 포함한 Machine 인증, AWS, GCP 등의 다양한 모듈을 제공한다.
 ![Credentials](../imgs/credentials.png)
 
 ### 1. Credentals 등록 
+> Menu > Credentials <img src="../imgs/add-button.png" width=20 height=20 align="absmiddle"/> </BR>
 ![Credentials](../imgs/create-credentials.png)
 ![Credentials](../imgs/list-credentials.png)
 
