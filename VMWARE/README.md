@@ -26,4 +26,5 @@ Vmware API
 -----
 
 - https://{VMMWARE_URL}/apiexplorer/index.html
+- [vSphere Automation API](https://developer.vmware.com/docs/vsphere-automation/v7.0U1/vcenter/)
 
