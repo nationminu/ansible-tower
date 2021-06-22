@@ -1,0 +1,15 @@
+---
+# tasks file for datastores
+- name: Get datastores from vCenter
+  uri:
+    url: https://{{ vcenter_server }}/rest/vcenter/datastore
+    force_basic_auth: yes
+    validate_certs: "{{ validate_certs }}"
+    headers:
+      Cookie: "{{ login.set_cookie }}"
+  register: vdatastores
+
+- name: Print names of datastores in the given vCenter
+  debug:
+    msg: "{{ item.name }}"
+  with_items: "{{ vdatastores.json.value }}"
