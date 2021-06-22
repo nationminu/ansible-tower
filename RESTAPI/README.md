@@ -35,7 +35,6 @@
 
 # 5. 실행된 Job 확인
 > Job Template ID를 사용하여 실행된 Job Template 을 확인한다.
-
 ``` 
 url -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/jobs/
 {"count":170,"next":"/api/v2/job_templates/12/jobs/?page=2","previous":null,"results":[{"id":10,"type":"job","url":"/api/v2/jobs/10/","related":{"created_by":"/api/v2/users/1/","labels":"/api/v2/jobs/10/labels/","inventory":"/api/v2/inventories/4/","project":"/api/v2/projects/11/","organization":"/api/v2/organizations/3/","credentials":"/api/v2/jobs/10/credentials/","unified_job_template":"/api/v2/job_templates/12/","stdout":"/api/v2/jobs/10/stdout/","job_events":"/api/v2/jobs/10/job_events/","job_host_summaries":"/api/v2/jobs/10/job_host_summaries/","activity_stream":"/api/v2/jobs/10/activity_stream/","notifications":"/api/v2/jobs/10/notifications/",...
@@ -45,6 +44,5 @@ url -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/jobs/
 # 6. API UI
 > Ansible Tower 는 API UI 를 제공한다. <BR>
 > https://<TOWER_URL>/api : 로그인 필요.
-
 > ![API_TEMPLATE](../imgs/api-template-2.png)
 
