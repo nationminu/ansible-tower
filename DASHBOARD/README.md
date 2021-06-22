@@ -43,3 +43,4 @@
 ## 8. Inventories
 > 인벤토리를 생성하거나, 생성된 인벤토리 목록을 보여준다. </BR>
 > dfsdfsdf
+sdkfjskldfj
