@@ -1,0 +1,15 @@
+---
+# tasks file for categories
+- name: Get Categories from vCenter
+  uri:
+    url: https://{{ vcenter_server }}/rest/com/vmware/cis/tagging/category
+    force_basic_auth: yes
+    validate_certs: "{{ validate_certs }}"
+    headers:
+      Cookie: "{{ login.set_cookie }}"
+  register: vCategories
+
+- name: Print names of Categories in the given vCenter
+  debug:
+    msg: "{{ item }}"
+  with_items: "{{ vCategories.json.value }}"
