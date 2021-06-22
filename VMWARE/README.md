@@ -19,8 +19,8 @@ Example Ansible playbook to manage VMware using HTTP APIs:
 Links
 -----
 
-[Ansible VMware Documentation](https://docs.ansible.com/ansible/latest/vmware/index.html) 
-[Ansible Playbook Example](https://github.com/Akasurde/ansible-vmware-http.git) 
+- [Ansible VMware Documentation](https://docs.ansible.com/ansible/latest/vmware/index.html) 
+- [Ansible Playbook Example](https://github.com/Akasurde/ansible-vmware-http.git) 
 
 Vmware API
 -----
