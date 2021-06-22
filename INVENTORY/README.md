@@ -31,3 +31,7 @@
 
 > Inventories > Inventory 선택 > Hosts
 ![Groups](../imgs/list-hosts.png)
+
+
+> **:link: Referer** : <BR>
+> https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html  
