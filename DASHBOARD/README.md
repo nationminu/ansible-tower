@@ -7,7 +7,7 @@
 ## 2. Jobs View
 > 템플릿의 작업 상태를 보여준다. </BR>
 > <img src="../imgs/launch-button.png" width=20 height=20 align="absmiddle"/> 버튼을 클릭하여 작업을 재실행, <img src="../imgs/delete-button.png" width=20 height=20 align="absmiddle"/> 버튼을 클릭하여 보여지는 작업을 제거 할 수 있다.
-![Jobsview](../imgs/jobs-view.png)
+![Jobsview](../imgs/jobs-view.PNG)
 
 ## 3. Schedules
 > 생성한 템플릿에 등록한 모든 예약작업이 표시된다. </BR>
