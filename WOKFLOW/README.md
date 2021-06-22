@@ -19,3 +19,7 @@
 > Workflow Job 실행시 Step 별로 진행상황이 표시된다.
 ![Workflow](../imgs/visualizer-workflow-4.png)
 ![Workflow](../imgs/visualizer-workflow-5.png)
+
+
+> **:link: Referer** : <BR>
+> https://docs.ansible.com/ansible-tower/latest/html/userguide/workflows.html

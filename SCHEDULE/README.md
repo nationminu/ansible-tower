@@ -9,3 +9,6 @@
 > 등록된 Schedule Job 실행 확인.
 > Menu > Jobs <br>
 ![Schedule](../imgs/list-schedule-2.png)
+
+> **:link: Referer** : <BR>
+> https://docs.ansible.com/ansible-tower/latest/html/userguide/scheduling.html

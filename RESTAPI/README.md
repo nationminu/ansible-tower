@@ -46,3 +46,6 @@ url -u "admin:rplinux" -k https://10.65.40.19/api/v2/job_templates/12/jobs/
 > https://<TOWER_URL>/api : 로그인 필요.
 > ![API_TEMPLATE](../imgs/api-template-2.png)
 
+> **:link: Referer** : <BR>
+> https://docs.ansible.com/ansible-tower/latest/html/towerapi/index.html </BR>
+> https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html
