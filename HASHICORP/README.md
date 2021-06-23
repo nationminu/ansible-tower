@@ -1,5 +1,25 @@
 # HashiCorp Vault 연동
 
+## HashiCorp Vault Secret Lookup Credential 생성
+
+## HashiCorp Vault KV Lookup Credential Type 생성
+- Input
+```
+fields:
+  - id: secret
+    type: string
+    label: Secret
+    secret: true
+required:
+  - secret  
+```
+- Injector
+```
+extra_vars:
+  vaultkv_secret: '{{ secret }}'
+``` 
+## KV Lookup Credential Type 참조하여 Credential 생성
+
 ## OTP playbook
 ```yaml
 ---
