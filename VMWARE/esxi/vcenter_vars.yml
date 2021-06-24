@@ -1,0 +1,16 @@
+---
+# Common variables
+- validate_certs: no
+- debug_flag: no
+
+# vCenter related details
+- vcenter_server: rp-vcsa.rpcb.local
+- vcenter_user: pst@vsphere.local
+- vcenter_pass: Rposs8806$
+
+# VMware object related details
+- datacenter: vSAN Datacenter
+- cluster_name: vSAN Cluster
+- vm_name: TestSC
+- esxi_hostname: 10.65.190.227
+#PST-ESXi01
