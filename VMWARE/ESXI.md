@@ -71,6 +71,7 @@ ok: [localhost] => {
 ```
 
 ![VMware ESXI](../imgs/esxi_maintenence.png)
+![VMware ESXI](../imgs/esxi_maintenence2.png)
 
 ## 3. Check Status Vcenter XSXI Hosts 
 ```
@@ -156,4 +157,3 @@ ok: [10.65.190.227] => {
 ``` 
 
 ```
-![VMware ESXI](../imgs/esxi_maintenence2.png)
