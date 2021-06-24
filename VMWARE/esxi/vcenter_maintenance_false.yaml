@@ -1,0 +1,26 @@
+---
+- hosts: localhost 
+  gather_facts: no 
+  
+  vars:
+    - ansible_python_interpreter: /usr/bin/python3
+  
+  vars_files: 
+    - vcenter_vars.yml
+
+  tasks: 
+    - name: Exit VSAN-Compliant Maintenance Mode
+      community.vmware.vmware_maintenancemode:
+        hostname: "{{ vcenter_server }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        validate_certs: no
+        esxi_hostname: "{{ esxi_hostname }}"
+        vsan: ensureObjectAccessibility
+        evacuate: false
+        timeout: 3600
+        state: absent 
+      register: maintenance
+    
+    - debug:
+        msg: "{{ maintenance }}"

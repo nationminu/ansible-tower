@@ -1,0 +1,24 @@
+---
+- hosts: 10.65.190.227 
+  gather_facts: no 
+  
+  vars:
+    - ansible_python_interpreter: /usr/bin/python3
+  
+  vars_files: 
+    - vcenter_vars.yml
+
+  tasks: 
+  #  - name: Copy VMware VIB to ESXI Host
+  #    copy: 
+  #      src: VMware-ESXi-7.0U1d-17551050-depot.zip
+  #      dest: /tmp/VMware-ESXi-7.0U1d-17551050-depot.zip
+ 
+   - name: Update VMware ESXi Hosts
+     shell: esxcli software component apply -d /vmfs/volumes/datastore1/Patch/VMware-ESXi-7.0U1d-17551050-depot.zip
+     register: updated
+     #shell: esxcli software profile update -d /tmp/ESXi670-201912001.zip --profile=ESXi-6.7.0-20191204001-standard
+    
+   - debug:
+       msg: "{{ updated }}"
+    
