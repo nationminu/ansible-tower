@@ -52,7 +52,7 @@
 > **ℹ️ Info**: For your information! </br>
 > Ansible Tower는 여러개의 작업을 연결하여 하나의 Workflow 를 생성하여 실행.
 
-[o] Ansible Tower [데모 보기](./WORKFLOWS/README.md)
+[o] Ansible Tower [데모 보기](./WORKFLOW/README.md)
 
 # 6. REST API
 > **:link: Referer**: 
